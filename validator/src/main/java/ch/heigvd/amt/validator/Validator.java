@@ -27,12 +27,12 @@ public class Validator {
      */
     public static void validateField(Field field, Object object) {
         for (Annotation annotation : field.getAnnotations()) {
-            switch (annotation) {
-                case NotNull notNull -> validateNotNull(field, object);
-                case Range range -> validateRange(range, field, object);
-                case Regex regex -> validateRegex(regex, field, object);
-                default -> {
-                }
+            if (annotation instanceof NotNull) {
+                validateNotNull(field, object);
+            } else if (annotation instanceof Range range) {
+                validateRange(range, field, object);
+            } else if (annotation instanceof Regex regex) {
+                validateRegex(regex, field, object);
             }
         }
     }
