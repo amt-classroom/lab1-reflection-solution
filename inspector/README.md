@@ -7,12 +7,11 @@ Your task is to complete the static method `inspect` of the `Inspector` class.
 Executing the `main` method of the `Dog` class should produce the following output:
 
 ```
-Class: Dog
+Class name: ch.heigvd.amt.inspector.Dog
 Fields:
  - name: Buddy
  - age: 5
 Methods:
- - main
  - bark
  - growl
  - getAge
