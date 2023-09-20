@@ -1,4 +1,4 @@
-package org.example;
+package ch.heigvd.amt.calculator;
 
 import org.junit.jupiter.api.Test;
 

@@ -51,6 +51,8 @@ public class PersonBuilder {
 Notice that the `BuilderProcessor` must be compiled before the `BuilderExample` module, hence the separate modules.
 The builder-example module has a dependency on the builder-processor module and the compiler of the builder-example module is configured to use the `BuilderProcessor` class as annotation processor in the `pom.xml` file.
 
+[JavaPoet](https://github.com/square/javapoet) can be used to facilitate the generation of the source code of the builder.
+
 Then, executing the `main` method of the `Person` class should produce the following output:
 
 ```

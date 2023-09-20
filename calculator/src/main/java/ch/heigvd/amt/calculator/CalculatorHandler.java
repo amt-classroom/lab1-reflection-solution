@@ -1,4 +1,4 @@
-package org.example;
+package ch.heigvd.amt.calculator;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
