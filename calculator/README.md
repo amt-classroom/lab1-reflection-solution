@@ -14,4 +14,18 @@ Invoking method: add(1, 2)
 Result of addition: 3
 Invoking method: subtract(4, 2)
 Result of subtraction: 2
+Invoking method: add(2147483647, 1)
+Result of overflow: -2147483648
+```
+
+
+Extend the `intercept` method with an integer overflow detection for the `add` method that returns `0` when an overflow occurs. Executing the `main` method of the `CalculatorHandler` class should produce the following output:
+```
+Invoking method: add(1, 2)
+Result of addition: 3
+Invoking method: subtract(4, 2)
+Result of subtraction: 2
+Invoking method: add(2147483647, 1)
+Overflow: -2147483648
+Result of overflow: 0
 ```

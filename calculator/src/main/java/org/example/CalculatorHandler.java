@@ -40,6 +40,14 @@ public class CalculatorHandler implements InvocationHandler {
         System.out.println("Invoking method: " + method.getName() + builder);
 
         // Invoke the original method on the original instance
+        Object o =  method.invoke(original, args);
+        if ("add".equals(method.getName()) &&
+            o instanceof Integer r && args[0] instanceof Integer a && args[1] instanceof Integer b) {
+            if (a > 0 && b > 0 && r < 0) {
+                System.out.println("Overflow: "+ r);
+                return 0;
+            }
+        }
         return method.invoke(original, args);
     }
 
@@ -72,5 +80,6 @@ public class CalculatorHandler implements InvocationHandler {
         // Use the proxy instance
         System.out.println("Result of addition: " + proxyCalculator.add(1, 2));
         System.out.println("Result of subtraction: " + proxyCalculator.subtract(4, 2));
+        System.out.println("Result of overflow: " + proxyCalculator.add(Integer.MAX_VALUE, 1));
     }
 }
