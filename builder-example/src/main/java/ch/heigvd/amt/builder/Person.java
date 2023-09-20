@@ -23,6 +23,11 @@ public class Person {
                 '}';
     }
 
+    /**
+     * Demonstrates the use of the @GenerateBuilder annotation.
+     *
+     * @param args the command line arguments
+     */
     public static void main(String... args) {
         // The builder class is generated at compile time
         // if the annotation processor is implemented and configured correctly

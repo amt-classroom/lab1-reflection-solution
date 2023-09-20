@@ -28,4 +28,12 @@ public class Inspector {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Demonstrate the use of the Inspector class by inspecting a dog.
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        inspect(new Dog("Buddy", 5));
+    }
 }

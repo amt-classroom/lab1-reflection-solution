@@ -73,7 +73,6 @@ public class BuilderProcessor extends AbstractProcessor {
                             .nextControlFlow("catch (Exception e)")
                             .addStatement("e.printStackTrace()")
                             .endControlFlow();
-
                 }
             }
 

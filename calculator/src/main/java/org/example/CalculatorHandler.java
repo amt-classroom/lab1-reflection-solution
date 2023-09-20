@@ -57,6 +57,11 @@ public class CalculatorHandler implements InvocationHandler {
         );
     }
 
+    /**
+     * Demonstrate the use of the calculator handler by creating a proxy instance of a calculator.
+     *
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         // Create an original calculator instance
         Calculator originalCalculator = new BasicCalculator();

@@ -43,7 +43,4 @@ public class Dog {
         return age;
     }
 
-    public static void main(String[] args) {
-        Inspector.inspect(new Dog("Buddy", 5));
-    }
 }
