@@ -2,7 +2,7 @@
 
 In the validator module, the `Validator` class uses annotations and reflection to validate the state of an object.
 
-Your task is to create the `@NotNull`, `@Range`, and `@Regex` annotations (commented out in the `Person` class) and complete the `validate` method of the `Validator` class.
+Your task is to complete the `validate` method of the `Validator` class.
 
 Executing the `main` method of the `Validator` class should produce the following output:
 
