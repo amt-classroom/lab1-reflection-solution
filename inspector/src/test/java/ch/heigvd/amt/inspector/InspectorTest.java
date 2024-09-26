@@ -17,12 +17,12 @@ class InspectorTest {
         assertEquals("""
                 Class name: ch.heigvd.amt.inspector.Dog
                 Fields:
-                 - name: Buddy
                  - age: 5
+                 - name: Buddy
                 Methods:
                  - bark
-                 - growl
                  - getAge
+                 - growl
                 """, out.toString());
     }
 }

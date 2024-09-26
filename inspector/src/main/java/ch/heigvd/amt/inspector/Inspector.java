@@ -2,6 +2,8 @@ package ch.heigvd.amt.inspector;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class Inspector {
 
@@ -15,13 +17,15 @@ public class Inspector {
             System.out.println("Class name: " + clazz.getName());
 
             System.out.println("Fields:");
-            for (Field field : clazz.getDeclaredFields()) {
+            // Sort method by alphabetical order as "elements in the returned array are not sorted and are not in any particular order."
+            for (Field field :  Arrays.stream(clazz.getDeclaredFields()).sorted(Comparator.comparing(Field::getName)).toList()) {
                 field.setAccessible(true);
                 System.out.println(" - " + field.getName() + ": " + field.get(object));
             }
 
             System.out.println("Methods:");
-            for (Method method : clazz.getDeclaredMethods()) {
+            // Sort method by alphabetical order as "elements in the returned array are not sorted and are not in any particular order."
+            for (Method method : Arrays.stream(clazz.getDeclaredMethods()).sorted(Comparator.comparing(Method::getName)).toList()) {
                 System.out.println(" - " + method.getName());
             }
         } catch (Exception e) {
