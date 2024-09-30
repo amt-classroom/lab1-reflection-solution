@@ -25,6 +25,6 @@ class ValidatorTest {
                 - age is not in range [0.0, 100.0]
                 - email does not match regex [a-z]+@[a-z]+\\.[a-z]+
                 - phoneNumber does not match regex \\+[0-9]{2} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}
-                """, out.toString());
+                """, out.toString().replaceAll(System.lineSeparator(), "\n"));
     }
 }

@@ -16,6 +16,6 @@ class PersonTest {
         Person.main(new String[0]);
         assertEquals("""
                 Person{name='John Doe', age=42}
-                """, out.toString());
+                """,  out.toString().replaceAll(System.lineSeparator(), "\n"));
     }
 }

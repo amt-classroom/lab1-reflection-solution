@@ -22,6 +22,6 @@ class CalculatorHandlerTest {
                 Invoking method: add(2147483647, 1)
                 Overflow: -2147483648
                 Result of overflow: 0
-                """, out.toString());
+                """,  out.toString().replaceAll(System.lineSeparator(), "\n"));
     }
 }

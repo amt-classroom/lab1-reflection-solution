@@ -23,6 +23,6 @@ class InspectorTest {
                  - bark
                  - getAge
                  - growl
-                """, out.toString());
+                """,  out.toString().replaceAll(System.lineSeparator(), "\n"));
     }
 }
